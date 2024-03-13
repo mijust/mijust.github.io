@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f2833; /* Dunkelblauer Hintergrund */
+    color: #f0f8ff; /* Weiße Schriftfarbe für bessere Lesbarkeit */
+    overflow: auto;
+}
+
+.container {
+    width: 50%; /* Zwei Drittel des Bildschirms */
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #39424E; /* Dunkelblauer Hintergrund für Header */
+    color: #f0f8ff;
+    padding: 20px 0;
+    width: 100%; /* Volle Breite des Bildschirms */
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    flex-grow: 1;
+    /* Main-Bereich nimmt verfügbaren Platz ein */
+    z-index: 10;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: #39424E;
+    /* Dunkelblauer Hintergrund für Sektionen */
+    padding: 20px;
+    border-radius: 10px;
+    /* Abgerundete Ecken für Sektionen */
+    margin-bottom: 40px;
+}
+
+section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section:not(:last-child) {
+    margin-bottom: 40px;
+    /* Abstand zwischen den Abschnitten, außer dem letzten */
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+#blob {
+    background-color: white;
+    height: 34vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right,
+            #32414e,
+            #435465);
+    opacity: 0.8;
+    z-index: -2;
+}
+
+#blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    backdrop-filter: blur(12vmax);
+}
+
+.experience-item ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.experience-item ul li {
+    margin-right: 10px; /* Abstand zwischen den Boxen */
+}
+
+.experience-item ul li:last-child {
+    margin-right: 0; /* Kein Abstand für das letzte Element */
+}
+
+.experience-item ul li {
+    display: inline-block;
+    padding: 5px 10px; /* Anpassen der Innenpolsterung */
+    border-radius: 5px; /* Abgerundete Ecken */
+    background-color: #e2e2e2; /* Helle Farbe */
+    color: #1f2833; /* Textfarbe */
+}
